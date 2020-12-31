@@ -1,0 +1,49 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	
+	<package name="default" extends="struts-default">
+		<interceptors>
+  			<interceptor-stack name="appDefaultStack">
+    			<interceptor-ref name="defaultStack">
+     				<param name="exception.logEnabled">true</param>
+    				<param name="exception.logLevel">ERROR</param>
+    			</interceptor-ref>
+ 			</interceptor-stack>
+		</interceptors>
+
+		
+		<default-interceptor-ref name="appDefaultStack" />
+		
+		<global-results>
+        	<result name="securityerror">/list.action</result>
+  			<result name="error">/error.jsp</result>
+   		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="org.apache.struts.register.exceptions.SecurityBreachException" result="securityerror" />
+	 		<exception-mapping exception="java.lang.Exception" result="error" />
+   		</global-exception-mappings>
+ 
+	    <action name="addbookscreen" class="client.action.AddBookScreenAction">
+            <result>addbook.jsp</result>
+    	</action>
+	    <action name="addbook" class="client.action.AddBookAction">
+	        <result name="success" type="redirectAction">listbooks</result>
+	    </action>
+	    <action name="listbooks" class="client.action.ListBooksAction">
+	        <result>listbooks.jsp</result>
+	    </action>
+	    <action name="editbookscreen" class="client.action.EditBookScreenAction">
+            <result>editbook.jsp</result>
+    	</action>
+	    <action name="editbook" class="client.action.EditBookAction">
+	        <result name="success" type="redirectAction">listbooks</result>
+	    </action>
+	    <action name="deletebook" class="client.action.DeleteBookAction">
+	        <result name="success" type="redirectAction">listbooks</result>
+	    </action>
+	</package>
+</struts>

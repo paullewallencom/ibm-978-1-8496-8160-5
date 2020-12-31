@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Client Extension Plug-in
+Bundle-SymbolicName: com.rtcessentials.cliext.teamcentral;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.rtcessentials.cliext.teamcentral.Activator
+Bundle-Vendor: RTC Essentals
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.ibm.team.jface;bundle-version="1.0.2"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

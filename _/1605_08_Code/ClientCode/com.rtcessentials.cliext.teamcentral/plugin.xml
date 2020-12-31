@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ibm.team.jface.expandableSection">
+      <expandableSection
+            class="com.rtcessentials.cliext.teamcentral.HelloWorldSection"
+            icon="pics/hw-l.jpg"
+            id="com.rtcessentials.cliext.teamcentral.expandableSection1"
+            isCloneable="true"
+            isDeletable="true"
+            isOpenable="true"
+            isTemplate="true"
+            name="Hello World">
+      </expandableSection>
+   </extension>
+
+</plugin>

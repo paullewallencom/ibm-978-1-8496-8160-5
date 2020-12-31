@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Server Extension Advisor Plug-in
+Bundle-SymbolicName: com.rtcessentials.serverext.advisor;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: RTC Essentials
+Require-Bundle: com.ibm.team.process.common;bundle-version="1.0.200",
+ com.ibm.team.repository.common;bundle-version="1.0.2",
+ com.ibm.team.workitem.common;bundle-version="2.2.0",
+ org.eclipse.core.runtime;bundle-version="3.4.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
